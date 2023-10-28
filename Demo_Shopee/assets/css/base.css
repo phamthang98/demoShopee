@@ -126,3 +126,9 @@ html {
     background-color: var(--primary-color);
     color: var(--white-color);
 }
+
+/* Hide btn login and register */
+
+.header__navbar-item--hide {
+    display: none !important;
+}

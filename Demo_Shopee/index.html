@@ -106,9 +106,13 @@
                                 <li><a href="#" class="header__navbar-language--decor">English</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="header__navbar-item header__navbar-item--separate header__navbar-item--strong js-register">Đăng ký</li>
-                        <li class="header__navbar-item header__navbar-item--strong js-login">Đăng nhập</li> -->
-                        <li class="header__navbar-item header__navbar-user">
+
+                        <!-- Đăng ký - đăng nhập -->
+                        <li class="header__navbar-item header__navbar-item--separate header__navbar-item--strong js-register">Đăng ký</li>
+                        <li class="header__navbar-item header__navbar-item--strong js-login">Đăng nhập</li>
+
+                        <!-- User đăng nhập -->
+                        <li class="header__navbar-item header__navbar-user header__navbar-item--hide js-user">
                             <div class="header__navbar-user-img-wrap">
                                 <img src="https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png" alt="" class="header__navbar-user-img">
                             </div>
@@ -126,7 +130,7 @@
                                 <li class="header__navbar-user-item">
                                     <a href="">Đơn mua của tôi</a>
                                 </li>
-                                <li class="header__navbar-user-item header__navbar-user-item--separate">
+                                <li class="header__navbar-user-item header__navbar-user-item--separate js-logout">
                                     <a href="">Đăng xuất</a>
                                 </li>
                             </ul>
@@ -368,7 +372,7 @@
 
                         <div class="auth-form__controls">
                             <button class="btn btn--normal auth-form__control-back js-modal-close-login">TRỞ LẠI</button>
-                            <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                            <button class="btn btn--primary js-login-user">ĐĂNG NHẬP</button>
                         </div>
                     </div>
                     
@@ -473,6 +477,31 @@
         }
 
         switchModalRegister.addEventListener('click', switchRegister)
+
+
+        // When click login on modal so hide btn login and register
+        const loginUser = document.querySelector('.js-login-user')
+        const userDemo = document.querySelector('.js-user')
+
+        function loginUserDemo () {
+            modalLogin.classList.remove('open')
+            btnLogin.classList.add('header__navbar-item--hide')
+            btnRegister.classList.add('header__navbar-item--hide')
+            userDemo.classList.remove('header__navbar-item--hide')
+        }
+
+        loginUser.addEventListener('click', loginUserDemo)
+
+        // When click logout so hide user and show btn login & register
+        const logoutUser = document.querySelector('.js-logout')
+
+        function logoutUserDemo () {
+            userDemo.classList.add('header__navbar-item--hide')
+            btnLogin.classList.remove('header__navbar-item--hide')
+            btnRegister.classList.remove('header__navbar-item--hide')
+        }
+
+        logoutUser.addEventListener('click', logoutUserDemo)
     </script>
 </body>
 </html>

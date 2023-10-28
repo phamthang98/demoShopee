@@ -107,13 +107,13 @@
 .header__navbar-item,
 .header__navbar-item-link,
 .header__navbar-icon-link {
-    display: inline-flex;
+    /* display: inline-flex; */
     align-items: center;
 }
 
 .header__navbar-item,
 .header__navbar-item-link {
-    display: inline-flex;
+    /* display: inline-flex; */
     font-size: 1.3rem;
     color: var(--white-color);
     text-decoration: none;
