@@ -957,3 +957,183 @@
 }
 
 /* Home sort + filter */
+.home-filter {
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.home-filter__label {
+    color: #555;
+    font-size: 1.4rem;
+    margin-right: 16px;
+}
+
+.home-filter__btn {
+    background-color: var(--white-color);
+    min-width: 90px;
+    margin-right: 12px;
+}
+
+.home-filter__page {
+    display: flex;
+    margin-left: auto;
+}
+
+.home-filter__page-num {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+
+.home-filter__page-current {
+    color: var(--primary-color);
+}
+
+.home-filter__page-control {
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    width: 72px;
+    height: 36px;
+}
+
+.home-filter__page-btn {
+    display: flex;
+    flex: 1;
+    background-color: var(--white-color);
+    text-decoration: none;
+}
+
+.home-filter__page-btn:first-child {
+    border-right: 1px solid #eee;
+}
+
+.home-filter__page-icon {
+    font-size: 1.4rem;
+    margin: auto;
+    color: #555;
+}
+
+.home-filter__page-btn--disabled {
+    background-color: #f9f9f9;
+    cursor: default;
+}
+
+.home-filter__page-btn--disabled .home-filter__page-icon {
+    color: #ccc;
+}
+
+/* Product */
+.home-product-item {
+    margin-top: 10px;
+    background-color: var(--white-color);
+
+}
+
+.home-product-item__img {
+    padding-top: 100%;
+    background-size: contain;
+}
+
+.home-product-item__name {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.8rem;
+    height: 3.6rem;
+    margin: 10px 10px 6px 10px;
+    overflow: hidden;
+    /* Cách css khi muốn thu gọn dòng chữ và xuất hiện dấu 3 chấm
+        Đầu tiên, phải set chiều cao dòng tối đa(line-height) theo mong muốn
+        Dùng thuộc tính overflow: hidden để ẩn các dòng chữ nhảy ra ngoài
+        Dùng đoạn dưới đây để set theo mong muốn */
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* Ngoài ra, còn cách khác nhưng chỉ dùng khi muốn chữ trên 1 dòng
+        Đầu tiên, set line-height về 1 dòng
+        dùng text-overflow: ellipsis
+        white-space: nowrap */
+    
+}
+
+.home-product-item__price {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.home-product-item__price-old {
+    font-size: 1.4rem;
+    color: #666;
+    text-decoration: line-through;
+    margin-left: 10px;
+}
+
+.home-product-item__price-current {
+    font-size: 1.6rem;
+    color: var(--primary-color);
+    margin-left: 10px;
+}
+
+.home-product-item__action {
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 10px 0;
+}   
+
+.home-product-item__like {
+    font-size: 1.4rem;
+}
+
+i.home-product-item__like-icon-fill {
+    color: #f63d30;
+    display: none;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-fill {
+    display: inline-block;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-empty {
+    display: none;
+}
+
+.home-product-item__rating {
+    font-size: 1rem;
+    transform: scale(0.7);
+    transform-origin: right;
+    color: #d5d5d5;
+}
+
+.home-product-item__origin {
+
+}
+
+.home-product-item__brand {
+
+}
+
+.home-product-item__origin-name {
+
+}
+
+.home-product-item__favourite {
+
+}
+
+.home-product-item__sale-off {
+
+}
+
+.home-product-item__sale-off-percent {
+
+}
+
+.home-product-item__sale-off-label {
+
+}
